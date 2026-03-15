@@ -1,0 +1,5 @@
+{
+  "EEGCoordinateSystem": "CapTrak",
+  "EEGCoordinateUnits": "m",
+  "EEGCoordinateSystemDescription": "Positions from the standard_1020 montage in MNE-Python, based on the international 10-20 system."
+}

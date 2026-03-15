@@ -1,0 +1,14 @@
+{
+  "TaskName": "images",
+  "TaskDescription": "Rapid image viewing with oddball detection. Participants viewed 10,000 natural images from NSD/MS-COCO across multiple sessions.",
+  "InstitutionName": "",
+  "Manufacturer": "BioSemi",
+  "ManufacturersModelName": "ActiveTwo",
+  "EEGChannelCount": 64,
+  "SamplingFrequency": 512.0,
+  "EEGReference": "CMS/DRL",
+  "PowerLineFrequency": 60,
+  "SoftwareFilters": "n/a",
+  "RecordingType": "continuous",
+  "EEGPlacementScheme": "10-20"
+}

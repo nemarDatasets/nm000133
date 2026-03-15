@@ -1,0 +1,20 @@
+{
+  "Name": "Alljoined1",
+  "BIDSVersion": "1.9.0",
+  "DatasetType": "raw",
+  "License": "CC-BY-NC-SA-4.0",
+  "Authors": [
+    "Jonathan Xu",
+    "Si Kai Lee",
+    "Wangshu Jiang"
+  ],
+  "ReferencesAndLinks": [
+    "https://doi.org/10.48550/arXiv.2404.05553",
+    "https://osf.io/kqgs8/",
+    "https://huggingface.co/Alljoined"
+  ],
+  "HowToAcknowledge": "Please cite: Xu, J., Lee, S. K., & Jiang, W. (2024). Alljoined - A dataset for EEG-to-Image decoding. https://doi.org/10.48550/arXiv.2404.05553. Data available at https://osf.io/kqgs8/",
+  "Funding": [],
+  "EthicsApprovals": [],
+  "DatasetDOI": ""
+}

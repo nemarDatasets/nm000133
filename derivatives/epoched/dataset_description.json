@@ -1,0 +1,11 @@
+{
+  "Name": "Alljoined1 - Epoched",
+  "BIDSVersion": "1.9.0",
+  "DatasetType": "derivative",
+  "GeneratedBy": [
+    {
+      "Name": "Alljoined1 preprocessing pipeline",
+      "Description": "Bandpass 0.5-125 Hz, ICA (95% variance), AutoReject, average reference, epochs -50 to 600 ms"
+    }
+  ]
+}
