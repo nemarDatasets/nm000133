@@ -1,0 +1,88 @@
+name: Version DOI
+
+on:
+  push:
+    tags: ['v*']
+
+permissions:
+  contents: write
+
+jobs:
+  publish-doi:
+    name: Publish Version DOI
+    runs-on: ubuntu-latest
+    steps:
+      - name: Create release if missing
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          TAG="${{ github.ref_name }}"
+          # Create release if it doesn't already exist (e.g., manual tag push)
+          gh release view "$TAG" --repo "${{ github.repository }}" > /dev/null 2>&1 || \
+            gh release create "$TAG" --repo "${{ github.repository }}" \
+              --title "$TAG" --notes "Release $TAG"
+
+      - name: Publish version DOI
+        env:
+          NEMAR_WEBHOOK_TOKEN: ${{ secrets.NEMAR_WEBHOOK_TOKEN }}
+        run: |
+          DATASET_ID="${{ github.event.repository.name }}"
+          TAG="${{ github.ref_name }}"
+          VERSION="${TAG#v}"
+          RELEASE_URL="https://github.com/${{ github.repository }}/releases/tag/$TAG"
+
+          echo "Publishing DOI for $DATASET_ID version $VERSION"
+
+          if [ -z "$NEMAR_WEBHOOK_TOKEN" ]; then
+            echo "NEMAR_WEBHOOK_TOKEN not configured, skipping DOI publish"
+            exit 0
+          fi
+
+          RESPONSE=$(curl -s -w "\n%{http_code}" -X POST \
+            "https://api.osc.earth/nemar/webhooks/publish-version-doi" \
+            -H "Content-Type: application/json" \
+            -H "X-Webhook-Token: $NEMAR_WEBHOOK_TOKEN" \
+            -d "{
+              \"dataset_id\": \"$DATASET_ID\",
+              \"version\": \"$VERSION\",
+              \"release_url\": \"$RELEASE_URL\"
+            }")
+
+          HTTP_CODE=$(echo "$RESPONSE" | tail -1)
+          BODY=$(echo "$RESPONSE" | head -n -1)
+
+          echo "Response: $BODY"
+
+          if [ "$HTTP_CODE" -ge 400 ]; then
+            if echo "$BODY" | jq -e '.skipped == true' > /dev/null 2>&1; then
+              echo "Skipped: No concept DOI exists for this dataset"
+              exit 0
+            fi
+            echo "::error::Failed to publish DOI (HTTP $HTTP_CODE)"
+            exit 1
+          fi
+
+          DOI=$(echo "$BODY" | jq -r '.version_doi // empty')
+          if [ -n "$DOI" ]; then
+            echo "Version DOI published: $DOI"
+          fi
+
+  trigger-archive:
+    name: Trigger Archive Generation
+    needs: publish-doi
+    runs-on: ubuntu-latest
+    steps:
+      - name: Dispatch archive generation
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          DATASET_ID="${{ github.event.repository.name }}"
+          TAG="${{ github.ref_name }}"
+          VERSION="${TAG#v}"
+
+          echo "Triggering archive generation for $DATASET_ID v$VERSION"
+
+          gh api "repos/${{ github.repository }}/dispatches" \
+            -f event_type=generate-archive \
+            -f "client_payload[dataset_id]=$DATASET_ID" \
+            -f "client_payload[version]=$VERSION"
