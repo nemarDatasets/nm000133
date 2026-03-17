@@ -1,11 +1,57 @@
 {
   "version": "2.0",
-  "pipeline_stage": "validated",
+  "pipeline_stage": "enriched",
+  "title": "Alljoined1",
+  "description": "Alljoined1 is an EEG dataset comprising neural responses from eight healthy adults viewing 10,000 natural images presented via rapid serial visual presentation (RSVP). The dataset contains approximately 46,080 epochs recorded using a 64-channel BioSemi ActiveTwo system at 512 Hz, designed to enable EEG-to-image decoding research. Raw data are preserved in BioSemi Data Format (24-bit resolution) with accompanying preprocessed and epoched derivatives. Note: approximately 46,080 epochs represents the total after accounting for missing data (sub-03 ses-01 epoched file unavailable).",
+  "methods_description": "EEG recordings were acquired using a 64-channel BioSemi ActiveTwo system with Ag/AgCl sintered electrodes positioned according to the International 10-20 system, digitized at 512 Hz with 24-bit A/D conversion. Participants performed an oddball detection task during rapid serial visual presentation of natural images (300 ms stimulus, 300 ms inter-stimulus interval with 0-50 ms jitter). Preprocessing included band-pass filtering (0.5-125 Hz), 60 Hz notch filtering, FastICA (95% variance retained), epoching (-50 to 600 ms), AutoReject artifact rejection, baseline correction, and average re-referencing.",
+  "license": "CC-BY-NC-ND-4.0",
+  "dataset_type": "raw",
   "authors": {
     "Jonathan Xu": {},
     "Si Kai Lee": {},
     "Wangshu Jiang": {}
   },
+  "keywords": [
+    {
+      "term": "EEG"
+    },
+    {
+      "term": "visual perception"
+    },
+    {
+      "term": "image decoding"
+    },
+    {
+      "term": "rapid serial visual presentation"
+    },
+    {
+      "term": "neural encoding"
+    },
+    {
+      "term": "natural images"
+    },
+    {
+      "term": "BioSemi"
+    },
+    {
+      "term": "oddball detection"
+    },
+    {
+      "term": "Natural Scenes Dataset"
+    },
+    {
+      "term": "decoding"
+    },
+    {
+      "term": "preprocessing"
+    },
+    {
+      "term": "artifact rejection"
+    },
+    {
+      "term": "visual oddball"
+    }
+  ],
   "related_identifiers": [
     {
       "identifier": "10.48550/arXiv.2404.05553",
@@ -23,14 +69,11 @@
       "relation_type": "IsDescribedBy"
     }
   ],
-  "title": "Alljoined1",
-  "license": "CC-BY-NC-ND-4.0",
-  "dataset_type": "raw",
   "resource_type_general": "Dataset",
+  "resource_type_specific": "EEG Dataset",
   "modalities": [
     "eeg"
   ],
-  "resource_type_specific": "EEG Dataset",
   "sizes": [
     "8.1 GB (42 files)"
   ],
@@ -51,27 +94,5 @@
     ".tsv",
     ".yml"
   ],
-  "description": "Alljoined1 is an EEG dataset comprising neural responses from eight healthy adults viewing 10,000 natural images presented via rapid serial visual presentation (RSVP). The dataset contains approximately 46,080 epochs recorded using a 64-channel BioSemi ActiveTwo system at 512 Hz, designed to support EEG-to-image decoding research. Raw data are preserved in 24-bit BioSemi Data Format with accompanying preprocessed and epoched derivatives.",
-  "methods_description": "EEG recordings were acquired using a 64-channel BioSemi ActiveTwo system with Ag/AgCl sintered electrodes in the International 10-20 montage, digitized at 512 Hz with 24-bit A/D conversion. Participants performed an oddball detection task during rapid serial visual presentation of natural images (300 ms stimulus, 300 ms inter-stimulus interval with 0-50 ms jitter). Preprocessing included 0.5-125 Hz band-pass filtering, 60 Hz notch filtering, FastICA-based independent component analysis (95% variance retained), -50 to 600 ms epoching relative to stimulus onset, and AutoReject-based artifact rejection.",
-  "keywords": [
-    {
-      "term": "EEG"
-    },
-    {
-      "term": "visual perception"
-    },
-    {
-      "term": "rapid serial visual presentation"
-    },
-    {
-      "term": "neural decoding"
-    },
-    {
-      "term": "natural images"
-    },
-    {
-      "term": "brain-computer interfaces"
-    }
-  ],
-  "source_hash": "5267637242605d4c500d947603b339a83a98b298b96aac6f6e997876c2df0c62"
+  "source_hash": "e1c6bed84fc9cbfb04976f3033a715cf868f84a75403903936cb0d50be11812d"
 }
