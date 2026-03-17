@@ -2,7 +2,7 @@
   "Name": "Alljoined1",
   "BIDSVersion": "1.9.0",
   "DatasetType": "raw",
-  "License": "CC-BY-NC-SA-4.0",
+  "License": "CC-BY-NC-ND-4.0",
   "Authors": [
     "Jonathan Xu",
     "Si Kai Lee",
