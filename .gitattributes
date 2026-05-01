@@ -1,0 +1,21 @@
+* annex.backend=MD5E
+**/.git* annex.largefiles=nothing
+*.bval annex.largefiles=nothing
+*.bvec annex.largefiles=nothing
+*.json annex.largefiles=nothing
+*.tsv annex.largefiles=nothing
+*.csv annex.largefiles=nothing
+.bidsignore annex.largefiles=nothing
+.gitignore annex.largefiles=nothing
+CHANGES annex.largefiles=nothing
+README annex.largefiles=nothing
+README.md annex.largefiles=nothing
+LICENSE annex.largefiles=nothing
+*.py annex.largefiles=nothing
+*.m annex.largefiles=nothing
+*.ipynb annex.largefiles=nothing
+*.yml annex.largefiles=nothing
+# Stimuli (JPGs / PNGs) go through git-annex so the binaries land on
+# nemar-s3 rather than bloating the GitHub repo.
+*.jpg annex.largefiles=anything
+*.png annex.largefiles=anything
