@@ -36,7 +36,8 @@ jobs:
           mkdir -p /tmp/archive-deps
           cd /tmp/archive-deps
           npm init -y > /dev/null
-          npm install --no-save archiver @aws-sdk/client-s3 @aws-sdk/lib-storage
+          # Pin to v7: v8+ is ESM-only, require() no longer returns the factory.
+          npm install --no-save 'archiver@^7.0.1' @aws-sdk/client-s3 @aws-sdk/lib-storage
 
       - name: Write archive script
         run: |
