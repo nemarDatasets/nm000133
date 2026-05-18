@@ -8,7 +8,7 @@ Alljoined1 is an EEG dataset of neural responses to rapid serial visual presenta
 
 The original data were recorded in BioSemi Data Format (BDF) via a 64-channel BioSemi ActiveTwo system with 24-bit A/D conversion, digitized at 512 Hz. This BIDS-formatted version preserves the BDF format to maintain full 24-bit data fidelity.
 
-**Reference:** Xu, J., Lee, S. K., & Jiang, W. (2024). Alljoined -- A dataset for EEG-to-Image decoding. <https://doi.org/10.48550/arXiv.2404.05553>
+**Reference:** Xu, J.*, Aristimunha, B.*, Feucht, M. E.*, Qian, E., Liu, C., Shahjahan, T., ... & Nestor, A. (2024). Alljoined--A dataset for EEG-to-Image decoding. Workshop Data Curation and Augmentation in Medical Imaging at 2024 IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR), 1–9. https://doi.org/10.48550/arXiv.2404.05553
 
 ## Recording Setup
 
@@ -158,4 +158,4 @@ This dataset is distributed under CC-BY-NC-ND-4.0 (Creative Commons Attribution-
 
 ## References
 
-Xu, J., Lee, S. K., & Jiang, W. (2024). Alljoined -- A dataset for EEG-to-Image decoding. https://doi.org/10.48550/arXiv.2404.05553
+Xu, J.*, Aristimunha, B.*, Feucht, M. E.*, Qian, E., Liu, C., Shahjahan, T., ... & Nestor, A. (2024). Alljoined--A dataset for EEG-to-Image decoding. Workshop Data Curation and Augmentation in Medical Imaging at 2024 IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR), 1–9. https://doi.org/10.48550/arXiv.2404.05553
