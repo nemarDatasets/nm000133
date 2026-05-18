@@ -1,9 +1,9 @@
 {
   "version": "2.0",
-  "pipeline_stage": "validated",
+  "pipeline_stage": "enriched",
   "title": "Alljoined1",
-  "description": "Alljoined1 is a 64-channel EEG dataset comprising neural responses from eight healthy adults viewing 10,000 natural images presented via rapid serial visual presentation (RSVP). The dataset includes approximately 46,080 epochs recorded at 512 Hz using a BioSemi ActiveTwo system, with stimuli drawn from the Natural Scenes Dataset and MS-COCO. This resource is designed to support EEG-to-image decoding research and includes both raw BDF recordings and preprocessed epoched derivatives.",
-  "methods_description": "EEG data were recorded from 8 right-handed adults (6 male, 2 female; mean age 22 ± 0.64 years) using a 64-channel BioSemi ActiveTwo system with 24-bit A/D conversion at 512 Hz sampling rate. Electrodes were positioned according to the International 10-20 system. Participants performed an oddball detection task during rapid serial visual presentation of natural images (300 ms stimulus, 300 ms black screen, 0-50 ms jitter); oddball trials (24 per block) were excluded from analysis. Preprocessing included 0.5-125 Hz band-pass filtering, 60 Hz notch filtering, FastICA (95% variance retained), epoching (-50 to 600 ms), AutoReject artifact rejection, baseline correction, and average re-referencing.",
+  "description": "Alljoined1 is a 64-channel EEG dataset comprising neural responses from eight healthy adults viewing 10,000 natural images each during rapid serial visual presentation (RSVP) with an oddball detection task. The dataset contains approximately 46,080 epochs across 13 sessions, with stimuli drawn from the Natural Scenes Dataset and MS-COCO. Raw data are preserved in 24-bit BioSemi BDF format, and preprocessed epoched derivatives in MNE-Python FIF format are provided, enabling research in EEG-to-image decoding and visual neuroscience.",
+  "methods_description": "EEG was recorded using a 64-channel BioSemi ActiveTwo system (Ag/AgCl sintered electrodes, International 10-20 montage) at 512 Hz sampling rate with 24-bit A/D conversion. Participants performed an RSVP oddball detection task with 300 ms image presentations followed by 300 ms black screen plus 0-50 ms jitter. Preprocessing included 0.5-125 Hz band-pass filtering, 60 Hz notch filtering, FastICA (95% variance retained), -50 to 600 ms epoching, AutoReject artifact rejection, baseline correction, and average re-referencing.",
   "license": "CC-BY-NC-ND-4.0",
   "dataset_type": "raw",
   "authors": {
@@ -28,28 +28,25 @@
       "term": "natural images"
     },
     {
-      "term": "brain-computer interfaces"
+      "term": "oddball detection"
     },
     {
-      "term": "ICA"
-    },
-    {
-      "term": "artifact rejection"
+      "term": "neural responses"
     },
     {
       "term": "BioSemi"
     },
     {
-      "term": "oddball task"
+      "term": "independent component analysis"
+    },
+    {
+      "term": "artifact rejection"
     },
     {
       "term": "Natural Scenes Dataset"
     },
     {
       "term": "MS-COCO"
-    },
-    {
-      "term": "BIDS"
     }
   ],
   "related_identifiers": [
