@@ -2,8 +2,8 @@
   "version": "2.0",
   "pipeline_stage": "validated",
   "title": "Alljoined1",
-  "description": "Alljoined1 is a 64-channel EEG dataset comprising neural responses from eight healthy adults viewing 10,000 natural images presented via rapid serial visual presentation (RSVP). The dataset contains approximately 46,080 epochs across 13 sessions, with stimuli drawn from the Natural Scenes Dataset and MS-COCO. Raw data are preserved in 24-bit BioSemi format and supplemented with preprocessed, epoched derivatives, designed to support EEG-to-image decoding research.",
-  "methods_description": "EEG was recorded using a 64-channel BioSemi ActiveTwo system with Ag/AgCl sintered electrodes in the International 10-20 montage, digitized at 512 Hz with 24-bit A/D conversion. Participants performed an oddball detection task during RSVP of natural images (300 ms presentation, 300 ms inter-stimulus interval with 0-50 ms jitter). Preprocessing included 0.5-125 Hz band-pass filtering, 60 Hz notch filtering, FastICA (95% variance retained), -50 to 600 ms epoching, AutoReject artifact rejection, baseline correction, and average re-referencing.",
+  "description": "Alljoined1 is a BIDS-formatted 64-channel EEG dataset comprising neural responses from eight healthy adults viewing 10,000 natural images presented via rapid serial visual presentation (RSVP). The dataset includes approximately 46,080 epochs recorded at 512 Hz using a BioSemi ActiveTwo system, with stimuli drawn from the Natural Scenes Dataset and MS-COCO. This resource includes both raw BDF recordings and preprocessed epoched derivatives stored in MNE-Python FIF format, designed to support EEG-to-image decoding research.",
+  "methods_description": "EEG data were recorded from 8 right-handed adults (6 male, 2 female; mean age 22 ± 0.64 years) using a 64-channel BioSemi ActiveTwo system with Ag/AgCl sintered electrodes positioned according to the International 10-20 system. Recordings were digitized at 512 Hz with 24-bit A/D conversion. Participants performed an oddball detection task during rapid serial visual presentation of natural images (300 ms stimulus, 300 ms inter-stimulus interval with 0-50 ms jitter). Preprocessing included 0.5-125 Hz band-pass filtering, 60 Hz notch filtering, FastICA-based independent component analysis (95% variance retained), epoching (-50 to 600 ms relative to stimulus onset), AutoReject-based artifact rejection, baseline correction, and average re-referencing.",
   "license": "CC-BY-NC-ND-4.0",
   "dataset_type": "raw",
   "authors": {
@@ -16,19 +16,28 @@
       "term": "EEG"
     },
     {
-      "term": "visual decoding"
+      "term": "visual perception"
     },
     {
       "term": "rapid serial visual presentation"
     },
     {
+      "term": "neural decoding"
+    },
+    {
       "term": "natural images"
     },
     {
-      "term": "neural encoding"
+      "term": "brain-computer interfaces"
+    },
+    {
+      "term": "BIDS"
     },
     {
       "term": "oddball detection"
+    },
+    {
+      "term": "image decoding"
     },
     {
       "term": "Natural Scenes Dataset"
@@ -38,6 +47,12 @@
     },
     {
       "term": "BioSemi"
+    },
+    {
+      "term": "preprocessing"
+    },
+    {
+      "term": "independent component analysis"
     }
   ],
   "related_identifiers": [
