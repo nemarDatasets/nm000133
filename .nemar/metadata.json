@@ -2,21 +2,43 @@
   "version": "2.0",
   "pipeline_stage": "enriched",
   "title": "Alljoined1",
-  "description": "Alljoined1 is a 64-channel EEG dataset comprising neural responses from eight healthy adults viewing 10,000 natural images each during rapid serial visual presentation (RSVP) with an oddball detection task. The dataset contains approximately 46,080 epochs across 13 sessions, with stimuli drawn from the Natural Scenes Dataset and MS-COCO. Raw data are preserved in 24-bit BioSemi BDF format, and preprocessed epoched derivatives in MNE-Python FIF format are provided, enabling research in EEG-to-image decoding and visual neuroscience.",
-  "methods_description": "EEG was recorded using a 64-channel BioSemi ActiveTwo system (Ag/AgCl sintered electrodes, International 10-20 montage) at 512 Hz sampling rate with 24-bit A/D conversion. Participants performed an RSVP oddball detection task with 300 ms image presentations followed by 300 ms black screen plus 0-50 ms jitter. Preprocessing included 0.5-125 Hz band-pass filtering, 60 Hz notch filtering, FastICA (95% variance retained), -50 to 600 ms epoching, AutoReject artifact rejection, baseline correction, and average re-referencing.",
+  "description": "Alljoined1 is a BIDS-formatted EEG dataset capturing neural responses of eight healthy adults viewing 10,000 natural images each in a rapid serial visual presentation (RSVP) paradigm with an oddball detection task, designed for EEG-to-image decoding research. Images were drawn from the Natural Scenes Dataset (NSD), itself sourced from MS-COCO, including 1,000 shared images across participants and 9,000 unique images per participant. Recordings were made with a 64-channel BioSemi ActiveTwo system at 512 Hz, with raw BDF files and derivative epoched FIF files preprocessed via ICA and AutoReject.",
+  "methods_description": "EEG was recorded using a 64-channel BioSemi ActiveTwo system (10-20 montage) at 512 Hz with 24-bit resolution during an RSVP oddball detection task, where images were presented for 300 ms followed by 300 ms black screen plus jitter. Derivative preprocessing by the original authors included 0.5-125 Hz band-pass filtering, 60 Hz notch filtering, FastICA-based artifact removal, epoching from -50 to 600 ms, AutoReject-based rejection, baseline correction, and average re-referencing.",
   "license": "CC-BY-NC-ND-4.0",
   "dataset_type": "raw",
   "authors": {
     "Jonathan Xu": {},
     "Si Kai Lee": {},
-    "Wangshu Jiang": {}
+    "Wangshu Jiang": {},
+    "Bruno Aristimunha": {},
+    "Max Emanuel Feucht": {},
+    "Emma Qian": {},
+    "Charles Liu": {},
+    "Tazik Shahjahan": {},
+    "Martyna Spyra": {},
+    "Steven Zifan Zhang": {},
+    "Nicholas Short": {},
+    "Jioh Kim": {},
+    "Paula Perdomo": {},
+    "Ricky Renfeng Mao": {},
+    "Yashvir Sabharwal": {},
+    "Michael Ahedor": {},
+    "Moaz Shoura": {},
+    "Adrian Nestor": {}
   },
   "keywords": [
+    {
+      "term": "Electroencephalography",
+      "subject_scheme": "MeSH",
+      "value_uri": "http://id.nlm.nih.gov/mesh/D004569"
+    },
     {
       "term": "EEG"
     },
     {
-      "term": "visual perception"
+      "term": "Visual Perception",
+      "subject_scheme": "MeSH",
+      "value_uri": "http://id.nlm.nih.gov/mesh/D014796"
     },
     {
       "term": "image decoding"
@@ -25,35 +47,23 @@
       "term": "rapid serial visual presentation"
     },
     {
-      "term": "natural images"
-    },
-    {
-      "term": "oddball detection"
-    },
-    {
-      "term": "neural responses"
-    },
-    {
-      "term": "BioSemi"
-    },
-    {
-      "term": "independent component analysis"
-    },
-    {
-      "term": "artifact rejection"
-    },
-    {
       "term": "Natural Scenes Dataset"
     },
     {
       "term": "MS-COCO"
+    },
+    {
+      "term": "oddball task"
+    },
+    {
+      "term": "brain-computer interface"
     }
   ],
   "related_identifiers": [
     {
       "identifier": "10.48550/arXiv.2404.05553",
       "identifier_type": "DOI",
-      "relation_type": "References"
+      "relation_type": "IsDescribedBy"
     },
     {
       "identifier": "https://github.com/nemarDatasets/nm000133",
@@ -61,14 +71,14 @@
       "relation_type": "IsDescribedBy"
     },
     {
-      "identifier": "https://nemar.org/dataexplorer/detail?dataset_id=nm000133",
-      "identifier_type": "URL",
-      "relation_type": "IsDescribedBy"
-    },
-    {
       "identifier": "10.82901/nemar.nm000133",
       "identifier_type": "DOI",
       "relation_type": "IsVersionOf"
+    },
+    {
+      "identifier": "https://nemar.org/dataset/nm000133",
+      "identifier_type": "URL",
+      "relation_type": "IsDescribedBy"
     }
   ],
   "resource_type_general": "Dataset",
@@ -77,10 +87,9 @@
     "eeg"
   ],
   "sizes": [
-    "8.3 GB (1002 files)"
+    "7.74 GB (1002 files)"
   ],
   "formats": [
-    ".DS_Store",
     ".bdf",
     ".csv",
     ".fif",
@@ -97,5 +106,5 @@
     ".tsv",
     ".yml"
   ],
-  "source_hash": "7664462afd992d1f00990979bbf22f7c291de4a3261d86fcf7a43f22455a741b"
+  "source_hash": "a99e25d290cc1d99cef3b518668516f3b8d6402ea33ddbcd199a9f6e6d280697"
 }

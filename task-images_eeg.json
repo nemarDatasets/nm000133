@@ -1,6 +1,6 @@
 {
   "TaskName": "images",
-  "TaskDescription": "Rapid image viewing with oddball detection. Participants viewed 10,000 natural images from NSD/MS-COCO across multiple sessions.",
+  "TaskDescription": "Rapid image viewing with oddball detection. The event files present 960 natural images from NSD's shared1000 set (MS-COCO), each up to four times per session.",
   "InstitutionName": "",
   "Manufacturer": "BioSemi",
   "ManufacturersModelName": "ActiveTwo",
