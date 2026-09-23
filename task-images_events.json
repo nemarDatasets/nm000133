@@ -1,0 +1,22 @@
+{
+  "onset": {
+    "Description": "Onset of the image, from the first data point.",
+    "Units": "s"
+  },
+  "duration": {
+    "Description": "0: the event marks the image onset.",
+    "Units": "s"
+  },
+  "trial_type": {
+    "Description": "Image presentation, as 'image/<value>'."
+  },
+  "value": {
+    "Description": "1-based position of the image in NSD's shared1000 list (sharedix in code/0_data_collection/nsd_expdesign.mat); stim_file names the image."
+  },
+  "sample": {
+    "Description": "Onset in samples, from the first data point (0)."
+  },
+  "stim_file": {
+    "Description": "Image shown at this onset, relative to stimuli/."
+  }
+}
