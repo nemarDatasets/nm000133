@@ -51,9 +51,15 @@ stimuli/<cocoSplit>/<cocoId:012d>.jpg            (preserves original COCO 2017 l
 ```
 
 Empirically the 960 shared NSD ids are all in `train2017`, so every
-stimulus path under this dataset is `stimuli/train2017/<cocoId:012d>.jpg`
-(e.g. `stimuli/train2017/000000277524.jpg`). Each `events.tsv` gives this path,
-relative to `stimuli/`, in its `stim_file` column.
+original COCO image is `stimuli/train2017/<cocoId:012d>.jpg`
+(e.g. `stimuli/train2017/000000277524.jpg`).
+
+Participants saw the NSD version of each image: the COCO image cropped to a
+square by NSD's `cropBox` and resized to 425x425. `code/crop_stimuli.py`
+writes these as `stimuli/nsd/<nsdId>.png` (NSD's 0-based id, e.g.
+`stimuli/nsd/7944.png`); they match NSD's `nsd_stimuli.hdf5` to within a few
+intensity levels. Each `events.tsv` names the image shown, relative to
+`stimuli/`, in its `stim_file` column.
 
 The 960 images ship under `stimuli/`. To re-fetch them from COCO and check every event resolves:
 
