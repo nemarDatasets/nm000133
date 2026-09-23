@@ -2,8 +2,8 @@
   "version": "2.0",
   "pipeline_stage": "enriched",
   "title": "Alljoined1",
-  "description": "Alljoined1 is an EEG dataset capturing neural responses of eight healthy adults to rapid serial visual presentation of natural images drawn from the Natural Scenes Dataset (NSD), designed for EEG-to-image decoding research. Recordings were made with a 64-channel BioSemi ActiveTwo system at 512 Hz, using an oddball detection paradigm across one or two sessions per participant. The dataset includes raw BDF EEG files, event annotations linking to stimulus images, and derivative epoched data preprocessed by the original authors.",
-  "methods_description": "EEG data were recorded using a 64-channel BioSemi ActiveTwo system with 24-bit A/D conversion at 512 Hz, referenced to CMS/DRL with average reference applied in preprocessing. Participants viewed images in an RSVP paradigm (300 ms image, 300 ms blank, plus jitter) performing an oddball detection task. Preprocessing by the original authors included 0.5-125 Hz band-pass filtering, 60 Hz notch filtering, FastICA for artifact removal, epoch extraction (-50 to 600 ms), AutoReject-based artifact rejection, baseline correction, and average re-referencing.",
+  "description": "Alljoined1 is an EEG dataset capturing neural responses to rapid serial visual presentation of natural images from the Natural Scenes Dataset (NSD), designed for EEG-to-image decoding research. Eight healthy right-handed adults completed one or two recording sessions using a 64-channel BioSemi ActiveTwo system while viewing images from a shared 960-image subset with an oddball detection task. The dataset includes raw BDF recordings and derivative epoched FIF files preprocessed with ICA and artifact rejection.",
+  "methods_description": "EEG was recorded using a 64-channel BioSemi ActiveTwo system (Ag/AgCl sintered electrodes, International 10-20 system) at 512 Hz, referenced to CMS/DRL with average reference applied during preprocessing. Participants viewed images for 300 ms followed by 300 ms black screen with jitter, performing an oddball detection task. Preprocessing by original authors included 0.5-125 Hz band-pass filtering, 60 Hz notch filtering, FastICA (95% variance retained), epoching (-50 to 600 ms), AutoReject artifact rejection, baseline correction, and average re-referencing.",
   "license": "CC-BY-NC-ND-4.0",
   "dataset_type": "raw",
   "authors": {
@@ -36,28 +36,25 @@
       "value_uri": "http://id.nlm.nih.gov/mesh/D014796"
     },
     {
-      "term": "image decoding"
+      "term": "natural images"
+    },
+    {
+      "term": "EEG-to-image decoding"
     },
     {
       "term": "rapid serial visual presentation"
     },
     {
-      "term": "RSVP"
+      "term": "Natural Scenes Dataset"
+    },
+    {
+      "term": "BioSemi ActiveTwo"
     },
     {
       "term": "oddball detection"
     },
     {
-      "term": "Natural Scenes Dataset"
-    },
-    {
       "term": "MS-COCO"
-    },
-    {
-      "term": "BIDS"
-    },
-    {
-      "term": "brain-computer interface"
     }
   ],
   "related_identifiers": [
@@ -88,7 +85,7 @@
     "eeg"
   ],
   "sizes": [
-    "7.75 GB (1025 files)"
+    "8.03 GB (1962 files)"
   ],
   "formats": [
     ".bdf",
