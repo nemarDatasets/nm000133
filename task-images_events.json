@@ -17,6 +17,6 @@
     "Description": "Onset in samples, from the first data point (0)."
   },
   "stim_file": {
-    "Description": "Image shown at this onset, relative to stimuli/."
+    "Description": "NSD image shown at this onset, relative to stimuli/: the COCO image cropped by NSD's cropBox and resized to 425x425 (code/crop_stimuli.py)."
   }
 }
