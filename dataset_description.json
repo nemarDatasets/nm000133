@@ -5,15 +5,28 @@
   "License": "CC-BY-NC-ND-4.0",
   "Authors": [
     "Jonathan Xu",
-    "Si Kai Lee",
-    "Wangshu Jiang"
+    "Bruno Aristimunha",
+    "Max Emanuel Feucht",
+    "Emma Qian",
+    "Charles Liu",
+    "Tazik Shahjahan",
+    "Martyna Spyra",
+    "Steven Zifan Zhang",
+    "Nicholas Short",
+    "Jioh Kim",
+    "Paula Perdomo",
+    "Ricky Renfeng Mao",
+    "Yashvir Sabharwal",
+    "Michael Ahedor",
+    "Moaz Shoura",
+    "Adrian Nestor"
   ],
   "ReferencesAndLinks": [
     "https://doi.org/10.48550/arXiv.2404.05553",
     "https://osf.io/kqgs8/",
     "https://huggingface.co/Alljoined"
   ],
-  "HowToAcknowledge": "Please cite: Xu, J., Lee, S. K., & Jiang, W. (2024). Alljoined - A dataset for EEG-to-Image decoding. https://doi.org/10.48550/arXiv.2404.05553. Data available at https://osf.io/kqgs8/",
+  "HowToAcknowledge": "Please cite: Xu, J., Aristimunha, B., Feucht, M. E., Qian, E., Liu, C., Shahjahan, T., ... & Nestor, A. (2024). Alljoined--A dataset for EEG-to-Image decoding. Workshop Data Curation and Augmentation in Medical Imaging at 2024 IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR), 1-9. https://doi.org/10.48550/arXiv.2404.05553. Data available at https://osf.io/kqgs8/",
   "Funding": [],
   "EthicsApprovals": [],
   "DatasetDOI": "10.82901/nemar.nm000133",
