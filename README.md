@@ -4,7 +4,7 @@
 
 ## Overview
 
-Alljoined1 is an EEG dataset of neural responses to rapid serial visual presentation (RSVP) of natural images, designed for EEG-to-image decoding research. Eight healthy right-handed adults (6 male, 2 female; mean age 22 +/- 0.64 years, normal or corrected-to-normal vision) each viewed 10,000 natural images across two recording sessions on separate days.
+Alljoined1 is an EEG dataset of neural responses to rapid serial visual presentation (RSVP) of natural images, designed for EEG-to-image decoding research. Eight healthy right-handed adults (6 male, 2 female; mean age 22 +/- 0.64 years, normal or corrected-to-normal vision) took part in one or two recording sessions on separate days. The study design has 10,000 NSD images per participant; the recordings in this dataset present the 960 shared images (see Stimulus Set).
 
 The original data were recorded in BioSemi Data Format (BDF) via a 64-channel BioSemi ActiveTwo system with 24-bit A/D conversion, digitized at 512 Hz. This BIDS-formatted version preserves the BDF format to maintain full 24-bit data fidelity.
 
@@ -27,10 +27,10 @@ Participants viewed natural images in a rapid serial visual presentation (RSVP) 
 
 10,000 natural images per participant drawn from the Natural Scenes Dataset (NSD), which itself is sourced from MS-COCO:
 
-- **1,000 shared images:** the first 960 images from the NSD "shared1000" subset, shown to all participants (each image repeated 4 times per participant)
-- **9,000 unique images:** different for each participant
+- **1,000 shared images:** the first 960 images from the NSD "shared1000" subset, shown to all participants (each image shown up to four times per session)
+- **9,000 unique images:** different for each participant; the recordings in this dataset do not reference them
 
-Each image was shown 4 times per participant across blocks and sessions (presented twice per block, with blocks repeated within sessions).
+In the recordings released here, every session presents the same 960 shared images, each up to four times; sub-02, sub-07 and sub-08 have one session.
 
 The BIDS event tables (every `events.tsv`) reference the stimuli as
 `trial_type = "image/N"` where `N` is a 1-indexed position (1..960) into
@@ -47,13 +47,15 @@ code/1_preprocessing/data/nsd_stim_info_merged.csv
     ↓
 cocoId, cocoSplit (val2017 / train2017)
     ↓
-stimuli/<cocoSplit>/000000<cocoId:012d>.jpg      (preserves original COCO 2017 layout)
+stimuli/<cocoSplit>/<cocoId:012d>.jpg            (preserves original COCO 2017 layout)
 ```
 
 Empirically the 960 shared NSD ids are all in `train2017`, so every
-stimulus path under this dataset is `stimuli/train2017/000000<id>.jpg`.
+stimulus path under this dataset is `stimuli/train2017/<cocoId:012d>.jpg`
+(e.g. `stimuli/train2017/000000277524.jpg`). Each `events.tsv` gives this path,
+relative to `stimuli/`, in its `stim_file` column.
 
-To populate `stimuli/`:
+The 960 images ship under `stimuli/`. To re-fetch them from COCO and check every event resolves:
 
 ```bash
 python code/download_stimuli.py            # ~140 MB, fetches only the 960 needed
