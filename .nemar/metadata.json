@@ -2,8 +2,8 @@
   "version": "2.0",
   "pipeline_stage": "enriched",
   "title": "Alljoined1",
-  "description": "Alljoined1 is an EEG dataset capturing neural responses to rapid serial visual presentation of natural images from the Natural Scenes Dataset (NSD), designed for EEG-to-image decoding research. Eight healthy right-handed adults completed one or two recording sessions using a 64-channel BioSemi ActiveTwo system while viewing images from a shared 960-image subset with an oddball detection task. The dataset includes raw BDF recordings and derivative epoched FIF files preprocessed with ICA and artifact rejection.",
-  "methods_description": "EEG was recorded using a 64-channel BioSemi ActiveTwo system (Ag/AgCl sintered electrodes, International 10-20 system) at 512 Hz, referenced to CMS/DRL with average reference applied during preprocessing. Participants viewed images for 300 ms followed by 300 ms black screen with jitter, performing an oddball detection task. Preprocessing by original authors included 0.5-125 Hz band-pass filtering, 60 Hz notch filtering, FastICA (95% variance retained), epoching (-50 to 600 ms), AutoReject artifact rejection, baseline correction, and average re-referencing.",
+  "description": "Alljoined1 is an EEG dataset of neural responses to natural images presented in a rapid serial visual presentation paradigm, built for EEG-to-image decoding research. Eight healthy adults viewed images from the Natural Scenes Dataset (MS-COCO) while 64-channel BioSemi EEG was recorded across one or two sessions. This BIDS version contains raw BDF recordings of 960 shared images, event tables linked to stimuli, and epoched derivatives from the original authors.",
+  "methods_description": "EEG was recorded with a 64-channel BioSemi ActiveTwo system at 512 Hz. Participants viewed natural images for 300 ms each, followed by 300 ms of black screen plus 0-50 ms of jitter, and pressed a key on consecutive repeated images (oddball detection). Derivative preprocessing comprised 0.5-125 Hz band-pass filtering, a 60 Hz notch filter, FastICA, epoching from -50 to 600 ms, AutoReject artifact rejection, baseline correction and average re-referencing.",
   "license": "CC-BY-NC-ND-4.0",
   "dataset_type": "raw",
   "authors": {
@@ -31,9 +31,12 @@
       "term": "EEG"
     },
     {
-      "term": "Visual Perception",
+      "term": "Electroencephalography",
       "subject_scheme": "MeSH",
-      "value_uri": "http://id.nlm.nih.gov/mesh/D014796"
+      "value_uri": "http://id.nlm.nih.gov/mesh/D004569"
+    },
+    {
+      "term": "rapid serial visual presentation"
     },
     {
       "term": "natural images"
@@ -42,13 +45,10 @@
       "term": "EEG-to-image decoding"
     },
     {
-      "term": "rapid serial visual presentation"
-    },
-    {
       "term": "Natural Scenes Dataset"
     },
     {
-      "term": "BioSemi ActiveTwo"
+      "term": "visual perception"
     },
     {
       "term": "oddball detection"
@@ -67,11 +67,6 @@
       "identifier": "https://github.com/nemarDatasets/nm000133",
       "identifier_type": "URL",
       "relation_type": "IsDescribedBy"
-    },
-    {
-      "identifier": "10.82901/nemar.nm000133",
-      "identifier_type": "DOI",
-      "relation_type": "IsVersionOf"
     },
     {
       "identifier": "https://nemar.org/dataset/nm000133",
