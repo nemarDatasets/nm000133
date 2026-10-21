@@ -44,4 +44,4 @@ jobs:
             -f "client_payload[ref]=$REF" \
             -f "client_payload[head_sha]=$HEAD_SHA" \
             -f "client_payload[pr_number]=$PR_NUMBER" \
-            -f "client_payload[validator_version]=2.4.1"
+            -f "client_payload[validator_version]=3.0.2"
